@@ -30,11 +30,11 @@ public class Alarm {
     @ColumnInfo(name = "wantNotification")
     private String notificationState;
 
-    public Alarm(String time){
+    public Alarm(String time, String title, String description, String notificationState){
         this.id = id;
-        this.title = "Alarm";
-        this.description = "No description";
-        this.notificationState = "0";
+        this.title = title;
+        this.description = description;
+        this.notificationState = notificationState;
         this.time = time;
     }
 

@@ -7,8 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".AddOrEditReminder"
-    tools:deviceIds="wear">
+    tools:context=".AddOrEditReminder">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout2"
@@ -25,51 +24,44 @@
             android:id="@+id/reminder_name_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="60dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="24dp"
             android:ems="10"
             android:inputType="textShortMessage"
-            android:text="Reminder Name:"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/reminder_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="28dp"
             android:ems="10"
             android:inputType="textShortMessage"
-            android:text="Reminder Description:"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reminder_name_text" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="60dp"
-            android:text="Choose Time and Date"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:text="Choose Time:"
             android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/reminder_description" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/edit_text_time"
+            android:id="@+id/reminder_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:ems="10"
             android:inputType="time"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintHorizontal_bias="0.735"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/reminder_description" />
 
@@ -89,10 +81,37 @@
             android:layout_width="265dp"
             android:layout_height="108dp"
             android:layout_marginBottom="80dp"
+            android:onClick="saveReminderClicked"
             android:text="Save Reminder"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:text="Reminder Description:"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/reminder_description"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="76dp"
+            android:text="Reminder Name:"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/reminder_name_text"
+            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
